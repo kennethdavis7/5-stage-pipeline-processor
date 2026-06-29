@@ -1,5 +1,24 @@
 # 5 Stage Pipeline Processor
 
+A custom 16-bit pipelined processor designed and implemented in Verilog HDL. The processor features a classic five-stage pipeline (Instruction Fetch, Instruction Decode, Execute, Memory Access, and Write Back) with support for hazard detection, data forwarding, branching, and memory operations.
+
+## Simulation
+
+### Prerequisites
+
+Install the following tools:
+
+1. Icarus Verilog (iverilog)
+2. GTKWave (gtkwave)
+
+Or FPGA IDE, such as Quartus.
+
+### Run these commands
+
+1. iverilog -o sim.vvp tb_pipeline_cpu.v pipeline_cpu.v
+2. vvp sim.vvp
+3. gtkwave wave.vcd
+
 ## Instruction Set Architecture (ISA)
 
 The processor implements a custom 16-bit instruction set.

@@ -25,7 +25,7 @@ module tb_pipeline_cpu;
     integer i;
 
     initial begin
-        $dumpfile("pipeline_tb.vcd");
+        $dumpfile("wave.vcd");
         $dumpvars(0, tb_pipeline_cpu);
 
         clk = 0;

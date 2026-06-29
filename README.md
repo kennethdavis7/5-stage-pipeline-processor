@@ -62,13 +62,3 @@ Some instructions occupy **two words (32 bits)**. For these instructions, the se
 
 - 8 general-purpose registers (`R0`–`R7`)
 - 16-bit register width
-
-### Status Flags
-
-The processor maintains condition flags that are updated by arithmetic and comparison operations:
-
-- **Z (Zero):** Result equals zero.
-- **N (Negative):** Result is negative.
-- **P (Positive):** Result is positive.
-
-These flags are used by the conditional branch instructions (`BEQ`, `BNE`, `BGT`, and `BLT`).

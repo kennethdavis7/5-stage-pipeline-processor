@@ -1,32 +1,3 @@
-// Instruction format
-
-// First word:
-// [15:11] opcode
-// [10:8]  rd
-// [7:5]   rs
-// [4:0]   unused
-//
-// Two-word instructions use the next memory word as imm16/address16.
-//
-// Opcode table:
-// 0 : MOV rd, rs          rd = rs
-// 1 : CMP rd, rs          updates flags using rd - rs, no register write
-// 2 : ADD rd, rs          rd = rd + rs
-// 3 : SUB rd, rs          rd = rd - rs
-// 4 : LDI rd, imm16       two-word
-// 5 : LDS rd, addr16      two-word
-// 6 : STS rd, addr16      two-word, stores rd into RAM[addr16]
-// 7 : JMP addr16          two-word
-// 8 : BEQ addr16          two-word
-// 9 : BNE addr16          two-word
-// 10: BGT addr16          two-word
-// 11: BLT addr16          two-word
-// 12: INC rd              rd = rd + 1
-// 13: DEC rd              rd = rd - 1
-// 14: NEG rd              rd = -rd
-// 15: AND rd, rs          rd = rd & rs
-// 16: OR  rd, rs          rd = rd | rs
-
 `define OP_MOV 5'd0
 `define OP_CMP 5'd1
 `define OP_ADD 5'd2
